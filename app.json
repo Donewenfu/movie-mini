@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "dMovie",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8e929d",
+    "selectedColor":"#35bf4f",
+    "borderStyle":"white",
+    "list":[
+      {
+        "iconPath": "images/icon/movie.png",
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/icon/movieon.png",
+        "text": "热映"
+      },
+      {
+        "iconPath": "images/icon/search.png",
+        "pagePath": "pages/search/search",
+        "selectedIconPath": "images/icon/searchon.png",
+        "text":"找片"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission":{
+    "scope.userLocation": {
+      "desc": "获取您的城市位置！"
+    }
+  }
+}

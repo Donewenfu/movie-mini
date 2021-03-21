@@ -1,0 +1,9 @@
+<view class="content">
+  <view class="left-city">
+    <image class="cityicon" src="/images/icon/localicon.png"></image>
+    <text class="cityname">{{city}}</text>
+  </view>
+  <view class="right-search" bind:tap="goserach">
+    <image class="searicon" src="/images/icon/searchicon.png"></image>
+  </view>
+</view>

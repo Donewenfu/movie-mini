@@ -1,0 +1,4 @@
+<!-- 头部搜索区域 -->
+<topheader></topheader>
+<!-- 轮播图区域 -->
+<swipers list='{{swiperList}}'></swipers>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topheader":"./component/topHeader/index",
+    "swipers":"./component/swipers/index"
+  },
+  "navigationBarTitleText":"热映"
+}
