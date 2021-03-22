@@ -110,10 +110,6 @@ Component({
           this.data.swiperLock = false
           },800)
       })
-      
-      
-      
-
   } else {//右滑动
     if (swp[1]) {
       swp[max - 1].swrClass = 'imgright1'
