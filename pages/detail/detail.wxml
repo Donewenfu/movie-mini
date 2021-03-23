@@ -1,0 +1,46 @@
+<view class="content">
+  <view class="topimg">
+    <image mode="widthFix" class="t-img" src="{{detailData.Image}}"></image>
+    <!-- 遮罩 -->
+    <image mode="widthFix" class="t-imgs" src="{{detailData.Image}}"></image>
+  </view>
+  <!-- 返回箭头 -->
+  <text class="iconfont icon-jiantou-copy arrowicon" bindtap='goback' style="top:{{backBtn+5}}px;"></text>
+  <!-- 内容区域 -->
+  <view class="detail-content" wx:if="{{detailData}}">
+    <!-- 电影介绍区域 -->
+    <view class="movie-info">
+        <view class="left-movieimg">
+          <image class="movie-img" src="{{detailData.Image}}"></image>
+        </view>
+        <view class="movie-infodetail">
+          <text class="movieName de">{{detailData.ChineseName}}</text>
+          <text class="movieTupe de">类型: {{detailData.Genre}}</text>
+          <text class="movieTime de">片长: {{detailData.Single_episode_length||'暂无数据'}}</text>
+          <text class="movieShow de">上映时间: {{detailData.DatePublished}}</text>
+          <text class="moviescorep de">豆荚子评分({{detailData.Votes}}人)</text>
+          <statr statrnum='{{detailData.Rating}}' imgwidth='simg' fontstyle='fontS' numDirect='{{true}}'></statr>
+        </view> 
+    </view>
+       <!-- 剧情介绍 -->
+      <view class="movie-desc">
+          <view class="m-desc-title">剧情介绍</view>
+          <text class="m-desc-detail {{!istextOpen?'text-ell':''}}">{{detailData.Description}}</text> <text class="m-open {{istextOpen?'m-o-d':''}}" bindtap='opentext'>{{istextOpen?"收起":"...展开"}}</text>
+      </view>
+      <!-- 影人介绍 -->
+      <view class="actorinfo">
+        <view class="actortitle">
+          <view class="actortitle-title">影人</view>
+          <view class="actorbum">
+            <text class="a-num">全部35人</text>
+            <text class="arrowicon iconfont icon-jiantou"></text>
+          </view>
+        </view>
+        <view  class="actorLits">
+          <scroll-view scroll-x="{{true}}">
+              <actor></actor>
+          </scroll-view>
+        </view>
+      </view>
+  </view> 
+</view>

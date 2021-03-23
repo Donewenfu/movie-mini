@@ -24,13 +24,16 @@ Component({
     //左边开的计时器
     leftTime:null,
     //控制用户的滑动 必须滑动完毕以后才能重新滑动
-    swiperLock:false
+    swiperLock:false,
+    //自动轮播图
+    autoSwiperimg:null
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+
     swiperData(){
       let swiperList = this.properties.list.map((item,index)=>{
         return {
@@ -38,7 +41,6 @@ Component({
           ...item
         }
       })
-      console.log(swiperList)
       this.setData({
         swiperList
       })
@@ -50,6 +52,7 @@ Component({
     },
     // 触碰结束
     end(e) {
+
       this.data.swiperLock = false
       let isLeft = 0;
       //计算手指结束触摸的pageX 的位置 
@@ -66,6 +69,7 @@ Component({
           this.data.swiperLock = true
             this.moveLeftorRight(0);
         }
+
       
   },
   //左右移动函数

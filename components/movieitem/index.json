@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "start":"/components/statr/index"
+  }
+}

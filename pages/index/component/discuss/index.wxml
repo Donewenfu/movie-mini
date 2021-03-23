@@ -1,0 +1,15 @@
+<view class="content">
+  <view class="discusstitle">
+    <text class="d-title">热议影片</text>
+    </view>
+    <view class="discussLits">
+      <scroll-view scroll-x="{{true}}" class="d-scroll">
+        <view bindtap="godetail" data-id='{{item.id}}' wx:for="{{listData}}" wx:key='index' class="discussitem" style="background-image:url('{{item.img}}');margin-left:{{index==0?'40rpx':''}};">
+          <view class="d-mask">
+             <text class="tagtext">#{{item.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  
+</view>

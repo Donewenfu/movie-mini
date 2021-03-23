@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "topheader":"./component/topHeader/index",
-    "swipers":"./component/swipers/index"
+    "swipers":"./component/swipers/index",
+    "movlist":"./component/movieList/index",
+    "discuss":"./component/discuss/index"
   },
   "navigationBarTitleText":"热映"
 }

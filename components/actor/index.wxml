@@ -1,0 +1,5 @@
+<view class="content">
+    <image class="actorimg" src="https://img9.doubanio.com/view/celebrity/s_ratio_celebrity/public/p48365.jpg"></image>
+    <text class="actorname">飞利浦一号</text>
+    <text class="actorpost"></text>
+</view>

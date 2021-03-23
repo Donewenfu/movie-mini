@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "statr":"/components/statr/index",
+    "actor":"/components/actor/index"
+  },
+  "navigationStyle":"custom",
+  "navigationBarTextStyle":"white"
+}

@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/more/more",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,9 +13,9 @@
   },
   "tabBar": {
     "color": "#8e929d",
-    "selectedColor":"#35bf4f",
-    "borderStyle":"white",
-    "list":[
+    "selectedColor": "#35bf4f",
+    "borderStyle": "white",
+    "list": [
       {
         "iconPath": "images/icon/movie.png",
         "pagePath": "pages/index/index",
@@ -24,13 +26,13 @@
         "iconPath": "images/icon/search.png",
         "pagePath": "pages/search/search",
         "selectedIconPath": "images/icon/searchon.png",
-        "text":"找片"
+        "text": "找片"
       }
     ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "permission":{
+  "permission": {
     "scope.userLocation": {
       "desc": "获取您的城市位置！"
     }

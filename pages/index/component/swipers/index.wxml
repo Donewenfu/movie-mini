@@ -6,17 +6,17 @@
     <!-- 轮播图区域 -->
     <view class="swiper-content" bindtouchstart='start' bindtouchend='end'>
       <block wx:for="{{swiperList}}" wx:key='index'>
-         <image  class='swiper-image  {{item.active?item.swrClass:""}}'  src="{{item.cover}}" data-index='{{index}}'>
-          <view class="movie-mask" hidden="{{!index}}" style="background-image:url({{item.cover}});"></view>
-          <view class="movie-desc" style="background-image:url({{item.cover}});"></view>
+         <image  class='swiper-image  {{item.active?item.swrClass:""}}'  src="{{item.image}}" data-index='{{index}}'>
+          <view class="movie-mask" hidden="{{!index}}" style="background-image:url({{item.image}});"></view>
+          <view class="movie-desc" style="background-image:url({{item.image}});"></view>
       <view class="movie-content">
         <view class="movie-desc-left">
-            <view class="movie-desc-title">{{item.title}}</view>
-            <view class="movie-desc-class">动作/冒险/科幻/美国</view>
-            <view class="movie-desc-actor">主演:周星驰/郭杰瑞</view>
+            <view class="movie-desc-title">{{item.name}}</view>
+            <view class="movie-desc-class">{{item.region}}</view>
+            <view class="movie-desc-actor">主演:{{item.actors}}</view>
         </view>
         <view class="movie-desc-right">
-          <view class="movie-nums">{{item.rate}}</view>
+          <view class="movie-nums">{{item.rating}}</view>
           <view class="movie-author">豆荚评分</view>
         </view>
       </view>
