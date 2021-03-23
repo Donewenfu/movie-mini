@@ -15,32 +15,64 @@
         </view>
         <view class="movie-infodetail">
           <text class="movieName de">{{detailData.ChineseName}}</text>
-          <text class="movieTupe de">类型: {{detailData.Genre}}</text>
+          <text class="movieTupe de">类型: {{detailData.Genre||'暂无数据'}}</text>
           <text class="movieTime de">片长: {{detailData.Single_episode_length||'暂无数据'}}</text>
-          <text class="movieShow de">上映时间: {{detailData.DatePublished}}</text>
-          <text class="moviescorep de">豆荚子评分({{detailData.Votes}}人)</text>
+          <text class="movieShow de">上映时间: {{detailData.DatePublished||'暂无数据'}}</text>
+          <text class="moviescorep de">豆荚子评分({{detailData.Votes||'暂无数据'}}人)</text>
           <statr statrnum='{{detailData.Rating}}' imgwidth='simg' fontstyle='fontS' numDirect='{{true}}'></statr>
         </view> 
     </view>
        <!-- 剧情介绍 -->
       <view class="movie-desc">
           <view class="m-desc-title">剧情介绍</view>
-          <text class="m-desc-detail {{!istextOpen?'text-ell':''}}">{{detailData.Description}}</text> <text class="m-open {{istextOpen?'m-o-d':''}}" bindtap='opentext'>{{istextOpen?"收起":"...展开"}}</text>
+          <text user-select class="m-desc-detail {{!istextOpen?'text-ell':''}}">{{detailData.Description}}</text> <text class="m-open {{istextOpen?'m-o-d':''}}" bindtap='opentext'>{{istextOpen?"收起":"...展开"}}</text>
       </view>
       <!-- 影人介绍 -->
       <view class="actorinfo">
         <view class="actortitle">
           <view class="actortitle-title">影人</view>
-          <view class="actorbum">
-            <text class="a-num">全部35人</text>
-            <text class="arrowicon iconfont icon-jiantou"></text>
+          <view class="actorbum" bindtap='goactor' data-listdata='{{detailData.Actors}}'>
+            <text class="a-num">全部{{actorNum}}人</text>
+            <text class="iconfont icon-jiantou arrow"></text>
           </view>
         </view>
         <view  class="actorLits">
-          <scroll-view scroll-x="{{true}}">
-              <actor></actor>
+          <scroll-view scroll-x="{{true}}" class="actorlists">
+              <block wx:for="{{detailData.Actors}}" wx:key='index'>
+                 <actor actorData='{{item}}' style="margin-left:{{index==0?'40rpx':''}};"></actor>
+              </block>
           </scroll-view>
         </view>
+      </view>
+      <!-- 相关视频 -->
+      <view class="correlation">
+        <view class="correlation-title">
+            <view class="correlation-titles">相关影片</view>
+            <view class="correlation-more">
+              <text class="arrowtext">{{movnum}}个相关影片</text>
+              <!-- <text class="iconfont icon-jiantou arrow"></text> -->
+            </view>
+        </view>
+        <view class="correlationLits">
+          <scroll-view scroll-x="{{true}}" class="correlationconten">
+            <block wx:for="{{detailData.OtherLike}}" wx:key='index'>
+              <movie movieData='{{item}}' imgwidth='imwith' style="margin-left:{{index==0?'40rpx':''}};" movieitems='itemmovie'></movie>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+      <!-- 用户评价 -->
+      <view class="usercomment">
+         <view class="commentTitle">观众短评</view>
+         <view class="comment-list">
+           <block wx:for="{{commentLits}}" wx:key='index'>
+             <comment commentData='{{item}}'></comment>
+           </block>
+         </view>
+         <view class="gocomment" bindtap='gocomment'>
+           <text class="morecomment">查看{{detailData.ChineseName}}更多评论</text>
+           <text class="iconfont icon-jiantou arrow"></text>
+         </view>
       </view>
   </view> 
 </view>

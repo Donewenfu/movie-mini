@@ -1,11 +1,11 @@
 .content{
     position: relative;
     .arrowicon{
-        position: absolute;
+        position: fixed;
         z-index: 99;
         top: 0;
         left: 15rpx;
-        font-size: 40rpx;
+        font-size: 50rpx;
         font-weight: bold;
         color: #fff;
     }
@@ -37,9 +37,10 @@
         position: absolute;
         top: 349rpx;
         left: 0rpx;
-        padding: 30rpx 40rpx;
+        
         box-sizing: border-box;
         .movie-info{
+            padding: 30rpx 40rpx 0;
             display: flex;
 
             .left-movieimg{
@@ -83,11 +84,14 @@
 
         }
         .movie-desc{
+            margin: 0 40rpx;
+            box-sizing: border-box;
             position: relative;
             .m-desc-title{
                 font-size: 27rpx;
                 color: #333;
                 font-weight: bold;
+                margin-bottom: 10rpx;
             }
             .m-desc-detail{
                 font-size: 24rpx;
@@ -95,6 +99,8 @@
                 line-height: 48rpx;
                 text-align: justify;
                 display: -webkit-box;
+                word-wrap: break-word;
+                word-break:break-all
             }
             .m-open{
                 color: #17b731;
@@ -112,7 +118,107 @@
                 text-overflow:ellipsis;
                 overflow: hidden;
                 -webkit-line-clamp: 3;
+                height: 150rpx;
                 -webkit-box-orient: vertical;
+                word-wrap: break-word;
+                word-break:break-all
+            }
+        }
+        .actorinfo{
+            .actortitle{
+                margin-top:60rpx;
+                padding: 0 40rpx;
+                display: flex;
+                justify-content: space-between;
+                .actorbum{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10rpx;
+                    .a-num{
+                        color: #aeb2be;
+                        font-size: 24rpx;
+                        
+                    }
+                    .arrow{
+                        color: #aeb2be;
+                        font-size:30rpx;
+                    }
+                }
+                .actortitle-title{
+                    font-size: 27rpx;
+                    color: #333;
+                    font-weight: bold;
+                   
+                }
+            }
+            .actorLits{
+                margin-top: 30rpx;
+                .actorlists{
+                    white-space: nowrap;
+                }
+            }
+        }
+        .correlationconten{
+        white-space: nowrap;
+            .itemmovie{
+                display: inline-block;
+            margin-right: 30rpx;
+            width: 220rpx !important;
+            }
+        }
+        .imwith{
+            width: 200rpx !important;
+            height: 280rpx !important;
+        }
+        .correlation-title{
+            margin-top: 40rpx;
+            padding: 0 40rpx;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30rpx;
+            justify-content: space-between;
+            .correlation-titles{
+                font-size: 27rpx;
+                color: #333;
+                font-weight: bold;
+               
+            }
+            .correlation-more{
+                .arrowtext{
+                    color: #aeb2be;
+                        font-size: 24rpx;
+                }
+                .arrow{
+                    color: #aeb2be;
+                    font-size:30rpx;
+                }
+            }
+        }
+        .usercomment{
+            padding: 0 40rpx;
+            .commentTitle{
+                margin-top: 30rpx;
+               
+                font-size: 27rpx;
+                color: #333;
+                font-weight: bold;
+                margin-bottom: 20rpx;
+            }
+            .gocomment{
+                margin-top: 30rpx;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 30rpx;
+                .morecomment{
+                    color: #35bf4f;
+                    font-size: 28rpx;
+                }
+                .arrow{
+                    color: #35bf4f;
+                    font-weight: bold;
+                }
             }
         }
     }

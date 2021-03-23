@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  padding: 40rpx;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content::after {
+  width: 30%;
+  content: '';
+}
+.content .actoritem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}

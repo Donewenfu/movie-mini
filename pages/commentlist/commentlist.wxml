@@ -1,0 +1,6 @@
+<view class="commentlits">
+  <block wx:for="{{commentList}}" wx:key='index'>
+    <comment commentData='{{item}}'></comment>
+  </block>
+  
+</view>

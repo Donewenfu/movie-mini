@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "statr":"/components/statr/index",
-    "actor":"/components/actor/index"
+    "actor":"/components/actor/index",
+    "movie":"/components/movieitem/index",
+    "comment":"/components/comment/index"
   },
   "navigationStyle":"custom",
   "navigationBarTextStyle":"white"

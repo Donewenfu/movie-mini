@@ -1,0 +1,5 @@
+<view class="content">
+    <block wx:for="{{listData}}" wx:key='index'>
+        <actor actorData='{{item}}' acitem='actoritem' style="width:30%;"></actor>
+    </block>
+</view>

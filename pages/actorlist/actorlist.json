@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "actor":"/components/actor/index"
+  },
+  "navigationBarTitleText":"影人"
+}

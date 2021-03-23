@@ -1,11 +1,10 @@
-// components/actor/index.js
+// components/comment/index.js
 Component({
-  externalClasses:['acitem'],
-    /**
+  /**
    * 组件的属性列表
    */
   properties: {
-    actorData:{
+    commentData:{
       type:Object,
       value:{}
     }

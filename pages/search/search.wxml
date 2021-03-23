@@ -1,1 +1,3 @@
-我是找片
+<view class="content">
+    <search></search>
+</view>

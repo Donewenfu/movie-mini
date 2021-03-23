@@ -1,0 +1,13 @@
+<view class="content">
+    <view class="comment-avatar">
+        <image class="avatar-img" src="{{commentData.image}}"></image>
+    </view>
+    <view class="right-view">
+        <view class="username">
+            <text class="uname">{{commentData.name}}</text>
+            <statr statrnum='{{commentData.rating}}'></statr>
+        </view>
+        <view class="commenttext"> {{commentData.content}} </view>
+        <view class="commentdate">{{commentData.time}}</view>
+    </view>
+</view>

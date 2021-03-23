@@ -1,7 +1,7 @@
 <view class="content">
-  <text class="scorenum fontstyle" wx:if="{{numDirect}}">{{statrnum}}分</text>
+  <text class="scorenum fontstyle" wx:if="{{numDirect}}">{{statrnum?statrnum:'暂无评'}}分</text>
   <image class="statrimg imgwidth" src="/images/icon/statrall.png" wx:for="{{alls}}" wx:key='index'></image>
   <image class="statrimg imgwidth" src="/images/icon/statrhalf.png" wx:for="{{halfs}}" wx:key="indexd"></image>
   <image class="statrimg imgwidth" src="/images/icon/statrbad.png" wx:for="{{bads}}" wx:key='index'></image>
-  <text class="scorenum fontstyle" wx:if="{{!numDirect}}">{{statrnum}}分</text>
+  <text class="scorenum fontstyle" wx:if="{{!numDirect}}">{{statrnum?statrnum:'暂无评'}}分</text>
 </view>

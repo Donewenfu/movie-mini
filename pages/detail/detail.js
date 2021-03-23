@@ -9,7 +9,13 @@ Page({
     //返回按钮距离顶部的距离
     backBtn:null,
     //文字展开或者收起
-    istextOpen:false
+    istextOpen:false,
+    //演员人数
+    actorNum:null,
+    //相关影片数量
+    movnum:null,
+    //评论数据
+    commentLits:null
   },
 
   /**
@@ -20,7 +26,7 @@ Page({
     this.getSystem()
     let mid = options.id
     //通过id查询数据
-    this.getDetail(mid)
+    this.getDetail(mid);
   },
   //获取详情数据
   getDetail(id){
@@ -30,16 +36,23 @@ Page({
     }
     getnet(params,(res)=>{
       let data = res.data
-      console.log(data)
+      //获取评论数据
+       this.getComment(id)
       wx.setNavigationBarTitle({
         title: data.ChineseName,
       })
       //转换电影的类型
       data.Genre = Object.values(data.Genre).join('/');
       data.Description = data.Description.replace(/\s+/g,"");
+      for(var k in data.OtherLike){
+        let randomnum = Math.floor(((Math.random()*10)+1).toFixed(1))
+        data.OtherLike[k].rate = randomnum
+      }
       //视图层数据响应
       this.setData({
-        detailData:data
+        detailData:data,
+        actorNum:Object.values(data.Actors).length,
+        movnum:Object.values(data.OtherLike).length
       })
     })
   },
@@ -69,6 +82,39 @@ Page({
       istextOpen:!this.data.istextOpen
     })
   },
+  //去演员列表
+  goactor(e){
+    let actorlits = JSON.stringify(e.currentTarget.dataset.listdata) 
+    wx.navigateTo({
+      url: '../actorlist/actorlist?list='+actorlits
+    });
+      
+  },
+  //监听用户滚动事件
+  onPageScroll(e){
+    //获取用户滚动到的距离
+    let userscroll = e.scrollTop
+
+  },
+  //请求第一页的数据
+  getComment(cid){
+    let params = {
+      type:'comment',
+      id:cid,
+      page:0
+    }
+    getnet(params,(res)=>{
+      this.setData({
+        commentLits:res.data
+      })
+    })
+  },
+  //去评论页面
+  gocomment(){
+    wx.navigateTo({
+      url:'../commentlist/commentlist?id='+this.data.detailData.Id+'&title='+this.data.detailData.ChineseName
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -80,7 +126,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.pageScrollTo({
+      duration: 1200,
+      scrollTop:0
+    })
   },
 
   /**

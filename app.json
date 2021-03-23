@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/search/search",
     "pages/more/more",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/actorlist/actorlist",
+    "pages/commentlist/commentlist"
   ],
   "window": {
     "backgroundTextStyle": "light",

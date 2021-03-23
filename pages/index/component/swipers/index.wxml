@@ -6,7 +6,7 @@
     <!-- 轮播图区域 -->
     <view class="swiper-content" bindtouchstart='start' bindtouchend='end'>
       <block wx:for="{{swiperList}}" wx:key='index'>
-         <image  class='swiper-image  {{item.active?item.swrClass:""}}'  src="{{item.image}}" data-index='{{index}}'>
+         <image bindtap='godetail'  class='swiper-image  {{item.active?item.swrClass:""}}'  src="{{item.image}}" data-index='{{index}}' data-id='{{item.id}}'>
           <view class="movie-mask" hidden="{{!index}}" style="background-image:url({{item.image}});"></view>
           <view class="movie-desc" style="background-image:url({{item.image}});"></view>
       <view class="movie-content">

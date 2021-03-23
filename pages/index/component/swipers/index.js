@@ -33,6 +33,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    godetail(e){
+      let ids = e.currentTarget.dataset.id;
+      wx.navigateTo({
+        url: '/pages/detail/detail?id='+ids,
+      })
+    },
 
     swiperData(){
       let swiperList = this.properties.list.map((item,index)=>{

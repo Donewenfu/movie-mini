@@ -2,11 +2,11 @@
   position: relative;
 }
 .content .arrowicon {
-  position: absolute;
+  position: fixed;
   z-index: 99;
   top: 0;
   left: 15rpx;
-  font-size: 40rpx;
+  font-size: 50rpx;
   font-weight: bold;
   color: #fff;
 }
@@ -36,10 +36,10 @@
   position: absolute;
   top: 349rpx;
   left: 0rpx;
-  padding: 30rpx 40rpx;
   box-sizing: border-box;
 }
 .content .detail-content .movie-info {
+  padding: 30rpx 40rpx 0;
   display: flex;
 }
 .content .detail-content .movie-info .left-movieimg .movie-img {
@@ -78,12 +78,15 @@
   height: 26rpx;
 }
 .content .detail-content .movie-desc {
+  margin: 0 40rpx;
+  box-sizing: border-box;
   position: relative;
 }
 .content .detail-content .movie-desc .m-desc-title {
   font-size: 27rpx;
   color: #333;
   font-weight: bold;
+  margin-bottom: 10rpx;
 }
 .content .detail-content .movie-desc .m-desc-detail {
   font-size: 24rpx;
@@ -91,6 +94,8 @@
   line-height: 48rpx;
   text-align: justify;
   display: -webkit-box;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .content .detail-content .movie-desc .m-open {
   color: #17b731;
@@ -107,5 +112,96 @@
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-line-clamp: 3;
+  height: 150rpx;
   -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.content .detail-content .actorinfo .actortitle {
+  margin-top: 60rpx;
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.content .detail-content .actorinfo .actortitle .actorbum {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.content .detail-content .actorinfo .actortitle .actorbum .a-num {
+  color: #aeb2be;
+  font-size: 24rpx;
+}
+.content .detail-content .actorinfo .actortitle .actorbum .arrow {
+  color: #aeb2be;
+  font-size: 30rpx;
+}
+.content .detail-content .actorinfo .actortitle .actortitle-title {
+  font-size: 27rpx;
+  color: #333;
+  font-weight: bold;
+}
+.content .detail-content .actorinfo .actorLits {
+  margin-top: 30rpx;
+}
+.content .detail-content .actorinfo .actorLits .actorlists {
+  white-space: nowrap;
+}
+.content .detail-content .correlationconten {
+  white-space: nowrap;
+}
+.content .detail-content .correlationconten .itemmovie {
+  display: inline-block;
+  margin-right: 30rpx;
+  width: 220rpx !important;
+}
+.content .detail-content .imwith {
+  width: 200rpx !important;
+  height: 280rpx !important;
+}
+.content .detail-content .correlation-title {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  justify-content: space-between;
+}
+.content .detail-content .correlation-title .correlation-titles {
+  font-size: 27rpx;
+  color: #333;
+  font-weight: bold;
+}
+.content .detail-content .correlation-title .correlation-more .arrowtext {
+  color: #aeb2be;
+  font-size: 24rpx;
+}
+.content .detail-content .correlation-title .correlation-more .arrow {
+  color: #aeb2be;
+  font-size: 30rpx;
+}
+.content .detail-content .usercomment {
+  padding: 0 40rpx;
+}
+.content .detail-content .usercomment .commentTitle {
+  margin-top: 30rpx;
+  font-size: 27rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.content .detail-content .usercomment .gocomment {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30rpx;
+}
+.content .detail-content .usercomment .gocomment .morecomment {
+  color: #35bf4f;
+  font-size: 28rpx;
+}
+.content .detail-content .usercomment .gocomment .arrow {
+  color: #35bf4f;
+  font-weight: bold;
 }

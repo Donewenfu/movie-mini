@@ -1,1 +1,37 @@
-/* components/actor/index.wxss */
+.content {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.content .innercontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.content .innercontent .actorimg {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}
+.content .innercontent .actorname {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 34rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 100rpx;
+}
+.content .innercontent .actorpost {
+  font-size: 24rpx;
+  color: #95969a;
+  line-height: 34rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 100rpx;
+}

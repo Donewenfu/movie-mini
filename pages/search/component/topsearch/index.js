@@ -1,14 +1,10 @@
-// components/actor/index.js
+// pages/search/topsearch/index.js
 Component({
-  externalClasses:['acitem'],
-    /**
+  /**
    * 组件的属性列表
    */
   properties: {
-    actorData:{
-      type:Object,
-      value:{}
-    }
+
   },
 
   /**

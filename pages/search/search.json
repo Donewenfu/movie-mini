@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "search":"./component/topsearch/index"
+  },
   "navigationBarTitleText":"找片"
 }
