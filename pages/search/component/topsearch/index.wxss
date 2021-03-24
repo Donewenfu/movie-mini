@@ -1,1 +1,24 @@
 /* pages/search/topsearch/index.wxss */
+.content{
+  padding:0  38rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.content .left-text{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.content .serachinput{
+  background-color: #efefef;
+  flex: 1;
+  margin-left: 40rpx;
+  padding: 10rpx 15rpx;
+  height: 33rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+}
+.pstyle{
+  color: #92959e;
+  font-size: 24rpx;
+}

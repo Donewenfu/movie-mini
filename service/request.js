@@ -1,4 +1,4 @@
-const HTTP_BASE_URL = "https://v.xhboke.com/douban/";
+const HTTP_BASE_URL = "https://wenfu814.xyz/";
 
 /**
  * function: 封装网络请求

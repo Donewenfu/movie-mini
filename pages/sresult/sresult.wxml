@@ -1,0 +1,5 @@
+<view class="content">
+  <block wx:for="{{list}}" wx:key='index'> 
+    <movieItem movieData='{{item}}' statrwidth='simg' imgwidth='imgw' style="width:30%;" textwidth='twidth' movieitems='movieitems'></movieItem>
+  </block>
+</view>

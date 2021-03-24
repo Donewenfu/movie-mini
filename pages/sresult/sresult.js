@@ -1,3 +1,4 @@
+// pages/searchpage/searchpage.js
 import {getnet} from '../../service/request'
 Page({
 
@@ -5,51 +6,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    //标题
-    titles:null,
-    //列表数据
-    listData:null,
-    tview:'s0'
+    pagenum:0,
+    //请求的数据
+    list:[],
+    //电影总数
+    totalitem:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let keyword = options.key
+    wx.setNavigationBarTitle({
+      title: keyword,
+    })
+    this.data.key = keyword
+    //请求搜索接口
+    this.getserch(keyword)
   },
-  //获取数据
-  getMovieData(){
+  getserch(){
     let params = {
-      type:'tag',
-      tags:this.data.titles+',,,,',
-      page:0,
-      sort:"U"
+      type:'search',
+      s:this.data.key,
+      page:this.data.pagenum
     }
     getnet(params,(res)=>{
-      let list = Object.values(res.data.data)
-      console.log(list)
       this.setData({
-        listData:list
+        list: this.data.list.concat(Object.values(res.data.data)),
+        totalitem:res.data.count
       })
+      
     })
   },
-  goshowmovie(){
-   wx.showToast({
-     title: '功能暂未开发~',
-     icon:'none'
-   })
-  },
-  //切换标题
-  changet(e){
-    this.setData({
-      titles:e.detail,
-      tview:'s0'
-    })
-    this.getMovieData()
-    
-  },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -89,7 +78,16 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if(this.data.list.length>=this.data.totalitem){
+      wx.showToast({
+        title: '没有更多数据啦！',
+        icon:'none'
+      })
+      return
+    }
+    this.data.pagenum = this.data.pagenum+1
+    this.getserch()
+    
   },
 
   /**

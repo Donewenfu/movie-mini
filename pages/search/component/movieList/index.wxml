@@ -1,0 +1,18 @@
+<view class="content cbtomm">
+  <!-- 标题区域 -->
+  <view class="movie-title">
+    <text class="movie-big-title">{{movieTitle}}</text>
+    <view class="movie-right-more" bindtap="gomore">
+      <text class="more-text">查看更多</text>
+      <text class="iconfont icon-jiantou righticon"></text>
+    </view>
+  </view>
+  <!-- 轮播图区域 -->
+  <view class="movie-swiper" wx:if="swiperListsd">
+      <scroll-view scroll-x="{{true}}" class="swipercontent"  scroll-with-animation="{{true}}" scroll-into-view='{{tov}}'>
+        <block wx:for="{{swiperListsd}}" wx:key='index'>
+          <movieItem movieData='{{item}}' id="{{'s'+index}}" movieitems='itemmovie' style="margin-left:{{index==0?'40rpx':''}};"></movieItem>
+      </block>
+      </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+.content{
+margin-top: 38rpx;
+}
+.content .selectlist{
+  white-space: nowrap;
+}
+.content .selectlist .sitem{
+  display: inline-block;
+  padding: 24rpx;
+  background-color: #efefef;
+  margin-right: 24rpx;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  color: #7d818c;
+}
+.content .selectlist .seactive{
+  background-color: #35bf4f;
+  color: #fff;
+}
+.content .selectlist .sitem:first-child{
+  margin-left:38rpx;
+}

@@ -1,0 +1,7 @@
+<view class="content">
+  <scroll-view scroll-x="{{true}}" class="selectlist" scroll-with-animation='{{true}}' scroll-left='{{scrollLeft}}'>
+    <block wx:for="{{listData}}" wx:key='index'>
+      <view class="sitem {{selectId==(index+1)?'seactive':''}}" data-title='{{item.name}}' id="se-{{index+1}}" bindtap="selectitem" data-id='{{item.id}}'>{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>

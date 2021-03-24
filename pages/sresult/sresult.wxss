@@ -1,0 +1,29 @@
+/* pages/more/more.wxss */
+.content{
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.content::after{
+  width: 30%;
+  content: '';
+}
+.content .imgw{
+  width: 100% !important;
+  height: 300rpx !important;
+}
+.content .twidth{
+  width: 100% !important;
+  height:46rpx;
+}
+.movieitems{
+  margin-bottom: 30rpx;
+}
+.simg{
+  width: 23rpx !important;
+  height: 23rpx !important;
+}

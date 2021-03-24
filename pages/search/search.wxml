@@ -1,3 +1,5 @@
 <view class="content">
     <search></search>
+    <selectmen bindchangetitle='changet'></selectmen>
+    <movilist movieTitle='{{titles}}' tov='{{tview}}' bindtoMore='goshowmovie' swiperList='{{listData}}'></movilist>
 </view>

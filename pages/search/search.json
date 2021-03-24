@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "search":"./component/topsearch/index"
+    "search":"./component/topsearch/index",
+    "selectmen":"./component/selectmen/index",
+    "movilist":"./component/movieList/index"
   },
   "navigationBarTitleText":"找片"
 }

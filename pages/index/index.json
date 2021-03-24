@@ -5,5 +5,5 @@
     "movlist":"./component/movieList/index",
     "discuss":"./component/discuss/index"
   },
-  "navigationBarTitleText":"热映"
+  "navigationBarTitleText":"雪梨评分"
 }

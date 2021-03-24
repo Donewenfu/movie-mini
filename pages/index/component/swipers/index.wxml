@@ -17,7 +17,7 @@
         </view>
         <view class="movie-desc-right">
           <view class="movie-nums">{{item.rating}}</view>
-          <view class="movie-author">豆荚评分</view>
+          <view class="movie-author">雪梨评分</view>
         </view>
       </view>
          </image>

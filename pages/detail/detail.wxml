@@ -18,7 +18,7 @@
           <text class="movieTupe de">类型: {{detailData.Genre||'暂无数据'}}</text>
           <text class="movieTime de">片长: {{detailData.Single_episode_length||'暂无数据'}}</text>
           <text class="movieShow de">上映时间: {{detailData.DatePublished||'暂无数据'}}</text>
-          <text class="moviescorep de">豆荚子评分({{detailData.Votes||'暂无数据'}}人)</text>
+          <text class="moviescorep de">雪梨评分({{detailData.Votes||'暂无数据'}}人)</text>
           <statr statrnum='{{detailData.Rating}}' imgwidth='simg' fontstyle='fontS' numDirect='{{true}}'></statr>
         </view> 
     </view>

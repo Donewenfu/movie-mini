@@ -5,7 +5,8 @@
     "pages/more/more",
     "pages/detail/detail",
     "pages/actorlist/actorlist",
-    "pages/commentlist/commentlist"
+    "pages/commentlist/commentlist",
+    "pages/sresult/sresult"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,4 +1,4 @@
 <view class="content">
     <view class="left-text">找片</view>
-      
+    <input class="serachinput" placeholder-class='pstyle' placeholder="请搜索你想看的电影" bindconfirm='suseach' /> 
 </view>

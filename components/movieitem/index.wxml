@@ -1,8 +1,8 @@
 <view class="content movieitems" bindtap="godetial" data-id='{{movieData.id}}'>
   <view class="mcontent">
-    <image class="movieimg imgwidth" src="{{movieData.cover||movieData.img}}"></image>
+    <image class="movieimg imgwidth" src="{{movieData.cover||movieData.img||movieData.image}}"></image>
     <text class="movie-title textwidth">{{movieData.title||movieData.name}}</text>
-    <start statrnum='{{movieData.rate}}' imgwidth='statrwidth'></start>
+    <start statrnum='{{movieData.rate||movieData.rating}}' imgwidth='statrwidth'></start>
   </view>
   
 </view>
