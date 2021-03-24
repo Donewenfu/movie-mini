@@ -1,4 +1,4 @@
-const HTTP_BASE_URL = "https://wenfu814.xyz/";
+const HTTP_BASE_URL = "";
 
 /**
  * function: 封装网络请求
